@@ -1,0 +1,83 @@
+﻿<section>
+<style>
+.jumbotron{
+padding-top: 5px;padding-bottom: 5px;
+}
+</style>
+
+<div class="jumbotron" >
+      <div class="container">	            
+          <div class="row">
+           <div style="padding-top: 10px" align="center" class="col-md-12">
+            <div align="center" class="col-md-3">
+        		<p>Pesquisa por Autor:</p>
+            </div>
+          	<div align="center" class="col-md-7">
+            	<input id="pr" class="form-control" type="text">
+            </div>
+            <div align="center" class="col-md-2">
+            	<button style="width=100%" class="btn" id="proc_aut" type="text" onClick="procura()"><i class="fa fa-search"></i></button>
+            </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+
+    <div class="container" data-bind="foreach: nome">
+    	<div class="row" >
+            <div class="col-md-2" align="center">
+            	<img data-bind="attr: { src: $data[5]}" style="border-radius: 5px; width: 60px; height: 60px;">
+            </div>
+            <div class="col-md-4" align="center" style="margin-top: 15px">
+                <strong><p data-bind="text: $data[0]" style="font-size: 20px;">Autor 1</p></strong>
+            </div>
+            <div class="col-md-3" align="center" style="margin-top: 15px">
+                <button data-bind="attr: { onClick: $data[1]}" class="btn btn-md" type="button" style="margin-bottom: 5px;">Info Bibliográfica</button>
+            </div>
+            <div class="col-md-3" align="center" style="margin-top: 15px">
+                <button data-bind="attr: { onClick: $data[2]}" class="btn btn-md" type="button" >Info Pessoal</button>
+            </div>
+            
+            <div class="col-md-12"></div>
+   </div>
+<div style="display:none" class="row" data-bind="attr: { id: $data[3]}">
+			<div class="col-md-12"><br></div>
+              <div class="col-md-6" align="center" >
+                <u style="margin-bottom: 3px; margin-top: 6px;"><b>Trabalhos:</b></u>
+                <div data-bind="foreach: {data: $data[9], as: 'livro'}">
+                	<p align="rigth" class="col-sm-9" style="margin-bottom: 1px;" data-bind="text: livro[0]"> </p>
+                    <div class="col-sm-3"><button  style="border-radius: 50px;" data-bind="attr: { onClick: livro[1]}"><i class="fa fa-info-circle"></i></button></div>
+                </div>
+            </div>
+            <div class="col-md-6" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;"><b>Trabalho mais vendido:</b></u>
+                <p data-bind="text: $data[10]"></p>
+            </div>
+
+        </div>
+        <div style="display:none" class="row" data-bind="attr: { id: $data[4]}">
+        	<div class="col-md-12"><br></div>
+            <div class="col-md-4" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;"><b>Contacto:</b></u>
+                <p data-bind="text: $data[6]"></p>
+            </div>
+            <div class="col-md-4" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;"><b>Morada:</b></u>
+                <p data-bind="text: $data[7]"></p>
+                <button data-bind="attr: {onClick: $data[11]}">MAPA!</button>
+            </div>
+            <div class="col-md-4" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;"><b>Cidade/Zip:</b></u>
+                <p data-bind="text: $data[8]"></p>
+            </div>
+
+        </div>
+<div class="col-md-12">
+            <hr />
+            </div>
+
+    </div> 
+
+</section>

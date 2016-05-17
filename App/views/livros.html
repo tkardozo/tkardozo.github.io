@@ -1,0 +1,72 @@
+﻿<section>
+<style>
+.jumbotron{
+padding-top: 5px;padding-bottom: 5px;
+}
+</style>
+<div class="jumbotron" >
+      <div class="container">	            
+          <div class="row">
+           <div style="padding-top: 10px" align="center" class="col-md-12">
+            <div align="center" class="col-md-3">
+        		<p>Livros por Categoria:</p>
+            </div>
+          	<div align="center" class="col-md-7">
+            	<select id="esc" class="form-control"></select>
+            </div>
+            <div align="center" class="col-md-2">
+            	<button style="width=100%" class="btn" type="text" onClick="proc_cat()"><i class="fa fa-search"></i></button>
+            </div>
+            </div>
+		</div>
+	</div>
+</div>
+
+
+    <div class="container" data-bind="foreach: book">
+    	<div class="row" >
+            <div class="col-md-2" align="center">
+            	<img src="Content/images/book_v.png" style="border-radius: 5px; width: 60px; height: 60px;">
+            </div>
+            <div class="col-md-4" align="center" style="margin-top: 15px">
+                <strong><p data-bind="text: $data[0]" style="font-size: 20px;">Livro</p></strong>
+            </div>
+            <div class="col-md-3" align="center" style="margin-top: 15px">
+                <button data-bind="attr: { onClick: $data[7]}" class="btn btn-md" type="button" style="margin-bottom: 5px;">+ Info</button>
+            </div>
+            <div class="col-md-3" align="center" style="margin-top: 15px">
+                <button  class="btn btn-md" type="button" ><a  target="_blank"data-bind="attr: { href: $data[9]}">Comprar</a></button>
+            </div>
+            
+            <div class="col-md-12"></div>
+   </div>
+<div style="display:none" class="row" data-bind="attr: { id: $data[8]}">
+			<div class="col-md-12"><br></div>
+              <div class="col-md-3" align="center" >
+                <u style="margin-bottom: 3px; margin-top: 6px;"><b>Autores:</b></u>
+                <div data-bind="foreach: {data: $data[6], as: 'autor'}">
+                	<p align="center" class="col-sm-10" style="margin-bottom: 1px;" data-bind="text: autor[0]"> </p>
+                    <div align="center" class="col-sm-2"><button  style="border-radius: 50px;" data-bind="attr: { onClick: autor[1]}"><i class="fa fa-info-circle"></i></button></div>
+                </div>
+            </div>
+            <div class="col-md-2" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;"><b>Género:</b></u>
+                <p style="margin-bottom: 1px;" data-bind="text: $data[1]"></p>
+            </div>
+            <div class="col-md-1" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;"><b>Preço:</b></u>
+                <p style="margin-bottom: 1px;" data-bind="text: $data[2]"></p>
+            </div>
+            <div class="col-md-6" align="center">
+            	<u style="margin-bottom: 3px; margin-top: 6px;"><b>Notas de edição:</b></u>
+                <p style="margin-bottom: 1px;" data-bind="text: $data[4]"></p>
+            </div>
+
+        </div>
+<div class="col-md-12">
+            <hr />
+            </div>
+
+    </div> 
+
+</section>
