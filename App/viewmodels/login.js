@@ -1,7 +1,5 @@
 ﻿define(function() {
 	  
-	
 	return {
-
 	};
 });

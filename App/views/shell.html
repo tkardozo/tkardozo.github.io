@@ -14,24 +14,11 @@
         </div>
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-           
-           
-           
-            <ul style="background-color: #E5D2B1;  margin-right: 2vw;" class="nav navbar-nav navbar-right" >
-            <li class="dropdown">
-       		<a class="dropdown-toggle" data-toggle="dropdown">Opções
-        	<span class="caret"></span></a>
-        	<ul class="dropdown-menu" data-bind="foreach: router.navigationModel">
-           <li style="color:rgba(242, 133, 0, 1.5);" data-bind="css: { active: isActive }">
-         <a data-bind="attr: { href: hash, title: title }, html: menu"></a>
-         </li>
-        </ul>
-      </li>
-                         
-            
-            
-            
-            
+            <ul class="nav navbar-nav navbar-right" data-bind="foreach: router.navigationModel" style="margin-right:15px;">
+                <li data-bind="css: { active: isActive }">
+                    <a data-bind='attr: { href: hash, title: title, onClick: logi}, html: menu'></a>
+                </li>
+            </ul>
         </div>
     </nav>
     <div class="page-host" data-bind="router: { transition:'entrance' }"></div>
