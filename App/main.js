@@ -1,8 +1,9 @@
 ﻿//Lista de utilizadores do tipo: ['Nome de Utilizador', 'Password', 'Tipo de Conta']
 //Tipo de Conta: Administrador: Admin; Utilizador: User; Senhorio: Owner.
 users=[["Administrador","admi","Admin"],["Utilizador1","util1","User"],["Senhorio1","senh1","Owner"]];
-newUsers=localStorage.getItem("users").split(',');
+newUsers=localStorage.getItem("users");
 if(newUsers!=null){
+	newUsers=newUsers.split(',');
 	novos=[];
 	for(l=0; l < newUsers.length; l++){
 		novos.push([newUsers[l], newUsers[l+1], newUsers[l+2]]);
