@@ -1,0 +1,198 @@
+﻿<section>
+<style>
+body{
+background-color: #E7E7E7 !important;
+}
+
+#footer {
+	width:100%;
+	height:24px;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+
+</style>
+
+
+<div class="container">
+	<div class="col-md-3 col-sm-0"> </div>
+	<div class="col-md-6 col-sm-12" style="border:3px solid rgba(242, 133, 0, 1.5); border-radius: 20px;" class="row">
+		<div class="col-md-12 col-sm-12" align="center"><h2 style="margin-left: 10px; color: rgba(242, 133, 0, 1.5)"><strong>Alterar Dados da Conta:</h2><br></div>
+      
+      		<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>Tipo de Conta:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<select style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="ctipo" onChange="updateFormChangeAccount()">
+                    <option disabled> Tipo? </option>
+                    <option value="User"> - Arrendatário - </option>
+                    <option value="Owner"> - Senhorio - </option>
+                </select>
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+            <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>Nome:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="text" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cname">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+            
+            <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>E-mail:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="email" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cemail">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+            
+            <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>Nome de Utilizador:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="text" disabled style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cusername">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+            <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>Palavra-Passe:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="password" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cpassword">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+             <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>Nova Palavra-Passe:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="password" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cpassword2">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+            <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>Contacto:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="number" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cnumber">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+            <div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<label>NIF:</label>
+            </div>
+            <div class="col-md-4 col-sm-12" align="center">
+            	<input type="number" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cnif">
+            </div>
+			<div class="col-md-2 col-sm-0"> </div>
+            <div class="col-md-12 col-sm-0"><br></div>
+            
+			
+            <div id="copcoesOwner" hidden>
+            
+            	<div class="col-md-2 col-sm-0"> </div>
+                <div class="col-md-4 col-sm-12" align="center">
+                    <label>Rua/Porta:</label>
+                </div>
+                <div class="col-md-4 col-sm-12" align="center">
+                    <input type="text" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cstreet">
+                </div>
+                <div class="col-md-2 col-sm-0"> </div>
+                <div class="col-md-12 col-sm-0"><br></div>
+            
+            
+            
+            
+                <div class="col-md-2 col-sm-0"> </div>
+                <div class="col-md-4 col-sm-12" align="center">
+                    <label>Localidade:</label>
+                </div>
+                <div class="col-md-4 col-sm-12" align="center">
+                    <input type="text" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="clocal">
+                </div>
+                <div class="col-md-2 col-sm-0"> </div>
+                <div class="col-md-12 col-sm-0"><br></div>
+                
+                
+                
+                
+                <div class="col-md-2 col-sm-0"> </div>
+                <div class="col-md-4 col-sm-12" align="center">
+                    <label>Codigo-Postal:</label>
+                </div>
+                <div class="col-md-4 col-sm-12" align="center">
+                    <input type="text" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; " id="cpostal">
+                </div>
+                <div class="col-md-2 col-sm-0"> </div>
+                <div class="col-md-12 col-sm-0"><br></div>
+
+            </div>
+
+
+           	<div id="erroAlteraConta" hidden class="col-md-12 col-sm-12" align="center"><br><h4 style="color: red"><strong>TESTE</h4></div>
+            <div class="col-md-12 col-sm-12"><hr></div>
+            <div class="col-md-12 col-sm-12" align="center">
+            	<button onClick='tryChangeAccount()'; style="border: 2px solid rgba(242, 133, 0, 0.5); background-color:rgba(242, 133, 0, 0.5); width: 100px; border-radius: 15px;">Alterar Conta</button>
+            </div>
+           
+          <div class="col-md-12 col-sm-12" >
+            <br>
+            </div>
+		 
+	</div>
+    <div class="col-md-3 col-sm-0"> </div>      
+      
+    </div> <!-- /container -->
+    
+
+     
+    	
+
+    
+     <div id="footer" align="center">
+        <p align="center">&reg; myPlaceRadar - MAS 2015/16 - Tiago_Cardoso/Fabio_Barros/Nuno_Silva</p>
+      </div>
+
+    
+</section>
+

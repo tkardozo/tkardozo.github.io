@@ -1,12 +1,5 @@
 ﻿<section>
 <style>
-.jumbotron{
-	background-opacity:0.5;
-	background:url("Content/images/indexbg.jpg");
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-}
-
 body{
 background-color: #E7E7E7 !important;
 }
@@ -21,7 +14,6 @@ background-color: #E7E7E7 !important;
 
 </style>
 
-<div class="jumbotron" style="height:45vh;">
 </div>
 
 <div class="container">
@@ -32,7 +24,7 @@ background-color: #E7E7E7 !important;
             	<label>Localidade:</label>
             </div>
             <div class="col-md-2 col-sm-12" align="left">
-            	<input type="text" placeholder="Onde?" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; margin-left: 10px;" id="slocalidade">
+            	<input type="text" placeholder="Onde?" style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; margin-left: 10px;" id="rlocalidade">
                 <br>
             </div>
                         
@@ -40,10 +32,10 @@ background-color: #E7E7E7 !important;
             <label style="display:inline;">Preço:</label>
             </div>
             <div class="col-md-5 col-sm-12" align="left">
-            <input onChange=" updateMinMax1()" value="150" id="price-min1" type="text" style="width: 40px; margin-right: 5px;">
- 			<input  onChange=" updateMinMax()" style="display:inline; width:10vw; margin-right:0px;" type="range" name="price-min" id="price-min" value="150" min="0" max="350">
-            <input onChange=" updateMinMax()" style="display:inline; width:10vw; margin-left:0px;" type="range" name="price-max" id="price-max" value="400" min="350" max="700">
-            <input onChange=" updateMinMax1()" value="350" id="price-max1" type="text" style="width: 40px; margin-left: 5px;">
+            <input onChange="rupdateMinMax1()" value="150" id="rprice-min1" type="text" style="width: 40px; margin-right: 5px;">
+ 			<input  onChange="rupdateMinMax()" style="display:inline; width:10vw; margin-right:0px;" type="range" name="price-min" id="rprice-min" value="150" min="0" max="350">
+            <input onChange="rupdateMinMax()" style="display:inline; width:10vw; margin-left:0px;" type="range" name="price-max" id="rprice-max" value="400" min="350" max="700">
+            <input onChange="rupdateMinMax1()" value="350" id="rprice-max1" type="text" style="width: 40px; margin-left: 5px;">
             </div>
             
             
@@ -51,7 +43,7 @@ background-color: #E7E7E7 !important;
             	<label>Tipologia:</label>
             </div>
             <div class="col-md-2 col-sm-12" align="left">
-            	<select style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; margin-left: 10px;" id="stipo">
+            	<select style="border: 2px solid rgba(242, 133, 0, 0.5); text-align: center; border-radius: 10px; margin-left: 10px;" id="rtipo">
             	<option disabled> Tipo? </option>
             	<option value="T0"> - T0 - </option>
             	<option value="T1"> - T1 - </option>
@@ -68,7 +60,7 @@ background-color: #E7E7E7 !important;
             </div>
             <hr>
             <div class="col-md-12 col-sm-12" >
-            	<a href="#results" title="Login" onClick='adSearch()'><button style="width: 100%; border-radius: 15px;"><img src="Content/images/Search.ico" style="width:50px; "/></button></a>
+            	<a href="#results" title="Login" onClick='radSearch()'><button style="width: 100%; border-radius: 15px;"><img src="Content/images/Search.ico" style="width:50px; "/></button></a>
             </div>
             
           <br><br>
@@ -76,10 +68,16 @@ background-color: #E7E7E7 !important;
 	</div>
           
       
-    </div> <!-- /container -->
+    </div>
     
-
-     
+ <div class="container" >
+ 	<div class="row" >
+        <div id="SemResultados" hidden class="col-md-12 col-sm-12" align="center"><br><h4 style="color: red"><strong>A pesquisa teve 0 resultados!</h4></div>
+    </div> 
+    <div class="col-md-12"><br></div>
+            <!-- ['Localidade', 'Endereço', 'CPostal', 'Tipo', 'Preco', 'TempoMinimo', 'Area', 'Descriçao', ['Imagen1','Imagem2'], 'Senhorio', 'Arrendatario']-->
+    <div class="row" id="Resultados" align="center">
+    </div>	
     	
 
     
@@ -90,4 +88,3 @@ background-color: #E7E7E7 !important;
 
     
 </section>
-
