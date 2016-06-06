@@ -17,91 +17,48 @@
 <body>
     <div id="applicationHost"></div>
     
-    <div class="container">
-  <div class="modal fade" id="myModal_proc" role="dialog">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 style=" display:inline-block;" class="modal-title">Resultados:</h2>
-        </div>
-        <div class="modal-body" >
-        <div style="display: block">
-            <div class="col-md-12" align="center" id="modal_proc">                
-            </div>
-            
-        </div>
-        <div class="col-sm-12"><br></div>
-        <div class="modal-footer" style="margin-top: 50px; border-top: 0px">
-          <button type="button" class="btn btn-default"  style="margin-top: 50px"  data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-
 <div class="container">
-  <div class="modal fade" id="myModal_autor" role="dialog">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <img style=" display:inline-block; border-radius: 5px; width: 60px; height: 60px;" id="foto" >
-          <h4 style=" display:inline-block;" id="nome" class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body" >
-        <div style="display: block">
-            <div class="col-sm-12" align="center"><strong>Info Pessoal</strong></div>
-            <div class="col-md-12"><br></div>
-            <div class="col-md-4" align="center">
-                <u style="margin-bottom: 3px; margin-top: 6px;">Contacto:</u>
-                <p id="contacto" style="margin-bottom: 1px;">Teste</p>
-            </div>
-            <div class="col-md-4" align="center">
-            	<u style="margin-bottom: 3px; margin-top: 6px;">Morada:</u>
-                <p id="morada"style="margin-bottom: 1px;">Teste</p>
-                <button id="btn_morada" class="btn"> MAPA! </button>
-            </div>
-            <div class="col-md-4" align="center">
-            	<u style="margin-bottom: 3px; margin-top: 6px;">Cidade/Zip:</u>
-                <p id="cidade" style="margin-bottom: 1px;">Teste</p>
-            </div>
-        </div>
-        <div class="col-sm-12"><br></div>
-        <div class="modal-footer" style="border-top: 0px">
-          <button type="button" class="btn btn-default" style="margin-top: 50px" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<div class="container">
-  <div class="modal fade" id="myModal_livro" role="dialog">
+  <div class="modal fade" id="myModal_info" role="dialog">
     <div class="modal-dialog modal-md">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
           <img style=" display:inline-block; border-radius: 5px; width: 60px; height: 60px;" id="foto" src="Content/images/book_v.png">
-          <h4 style=" display:inline-block;" id="nomea" class="modal-title">Modal Header</h4>
         </div>
         <div class="modal-body" >
         <div style="display: block">
             <div class="col-md-12"><br></div>
-            <div class="col-md-2" align="center">
-                <u style="margin-bottom: 3px; margin-top: 6px;">Género:</u>
-                <p id="genero" style="margin-bottom: 1px;">Teste</p>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Localidade:</u>
+                <p id="showLocal" style="margin-bottom: 1px;">Teste</p>
             </div>
-            <div class="col-md-2" align="center">
-            	<u style="margin-bottom: 3px; margin-top: 6px;">Preço:</u>
-                <p id="preco"style="margin-bottom: 1px;">Teste</p>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Rua/Porta:</u>
+                <p id="showRua" style="margin-bottom: 1px;">Teste</p>
             </div>
-            <div class="col-md-8" align="center">
-            	<u style="margin-bottom: 3px; margin-top: 6px;">Notas de edição:</u>
-                <p id="notas" style="margin-bottom: 1px;">Teste</p>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Código-Postal:</u>
+                <p id="showCPostal" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Tipo:</u>
+                <p id="showTipo" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Preço:</u>
+                <p id="showPreco" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Tempo Mínimo:</u>
+                <p id="showTempo" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Área Util:</u>
+                <p id="showArea" style="margin-bottom: 1px;">Teste</p>
+            </div>
+            <div class="col-md-12" align="center">
+                <u style="margin-bottom: 3px; margin-top: 6px;">Descrição:</u>
+                <p id="showDesc" style="margin-bottom: 1px;">Teste</p>
             </div>
         </div>
         <div class="col-sm-12"><br></div>
@@ -113,28 +70,6 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="modal fade" id="myModal_mapa" role="dialog">
-    <div class="modal-dialog modal-md">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 style=" display:inline-block;" class="modal-title">Localização</h4>
-        </div>
-        <div class="modal-body" >
-        <div style="display: block">
-            <div class="col-sm-12" align="center">
-            <iframe id="mapa" frameborder="0" style="border:0; width:100%; height:250px;" allowfullscreen></iframe>
-            </div>
-        </div>
-        <div class="col-sm-12"><br></div>
-        <div class="modal-footer" style="border-top: 0px">
-          <button type="button" class="btn btn-default"  style="margin-top: 50px"  data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
     
     
